@@ -1,0 +1,17 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build && push",
+            "type": "shell",
+            "command": "ndk-build && adb push libs\\arm64-v8a\\lolmpad /data/local/tmp && adb shell chmod +x  /data/local/tmp/lolmpad",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
